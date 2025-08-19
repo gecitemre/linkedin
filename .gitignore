@@ -1,0 +1,7 @@
+/.env
+/.venv
+/__pycache__
+/debug_page_1.html
+/linkedin_companies.csv
+/run_scraper.py
+/sportswear.csv
