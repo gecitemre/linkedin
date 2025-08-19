@@ -254,8 +254,15 @@ class LinkedInScraper:
         if self.driver:
             self.driver.quit()
 
-    def save_results(self, filename="linkedin_companies.csv"):
+    def save_results(self, filename=None):
         if self.results:
+            # Create filename with search term if not provided
+            if filename is None:
+                # Sanitize search term for filename (remove special characters)
+                safe_search_term = re.sub(r"[^\w\s-]", "", self.search_term).strip()
+                safe_search_term = re.sub(r"[-\s]+", "_", safe_search_term)
+                filename = f"linkedin_companies_{safe_search_term}.csv"
+
             df = pd.DataFrame(self.results)
             df.to_csv(filename, index=False)
             print(f"Saved {len(self.results)} companies to {filename}")
