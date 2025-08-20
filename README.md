@@ -54,21 +54,6 @@ python run_scraper.py --search "sportswear" --location "amsterdam" --output "spo
 - `--pages`, `-p`: Maximum pages to scrape (default: 5)
 - `--headless`: Run in headless mode (no browser window)
 
-**Examples:**
-```bash
-# Basic usage
-python run_scraper.py --search "tech companies" --location "san francisco"
-
-# Scrape more pages
-python run_scraper.py --search "fintech" --location "london" --pages 10
-
-# Run in headless mode
-python run_scraper.py --search "biotech" --location "boston" --headless
-
-# Custom output file
-python run_scraper.py --search "automotive" --location "detroit" --output "auto_companies.csv"
-```
-
 ### Option 2: Direct Script Execution
 
 Edit the `linkedin_scraper.py` file to change the search term and location, then run:
